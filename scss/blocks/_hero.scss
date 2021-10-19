@@ -1,0 +1,154 @@
+.site-hero {
+  padding: 80px 0;
+}
+
+.desc__list {
+  margin-bottom: 26px;
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 248px;
+    height: 1px;
+    background-color: #e5e5e5;
+  }
+}
+
+.desc__item {
+  margin-right: 20px;
+
+  &-avtive .desc__link {
+    color: $color-b00000;
+    position: relative;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80%;
+      height: 1px;
+      background-color: $color-b00000;
+    }
+  }
+}
+
+.desc__link {
+  font-family: $font-poppins;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #d6d4d4e0;
+  text-decoration: none;
+}
+
+.hero__title {
+  font-family: $font-poppins;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 77px;
+  color: #2e2e2e;
+  margin-bottom: 34px;
+}
+
+.hero__text {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #808080;
+  margin-bottom: 60px;
+}
+
+.connect__btn-red {
+  padding: 12px 14px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $font-poppins;
+  background-color: $color-b00000;
+  border-color: $color-b00000;
+  transition: box-shadow 0.4s ease;
+
+  &:hover {
+    box-shadow: 0 0 50px 0.1px $color-b00000;
+  }
+}
+
+.connect__btn-white {
+  padding: 12px 14px;
+  margin-left: 24px;
+  color: #000;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $font-poppins;
+  background-color: #fff;
+  border-color: #000;
+  transition: box-shadow 0.4s ease,
+              background-color 0.4s ease,
+              color 0.4s ease;
+  
+  &:hover {
+    color: #fff;
+    border-color: $color-b00000;
+    background-color: $color-b00000;
+    box-shadow: 0 0 50px 0.1px $color-b00000;
+  }
+}
+
+// media
+
+@media screen and (max-width: 992px) {
+  .site-hero {
+    padding: 40px 0;
+  }
+  
+  .hero__title {
+    line-height: 40px;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .hero__text {
+    margin-bottom: 20px;
+  }
+
+  .hero__connect {
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .hero__title {
+    font-size: 24px;
+    line-height: 30px
+  }
+
+  .hero__text {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .hero__connect {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .connect__btn-red {
+    margin-bottom: 10px;
+  }
+
+  .connect__btn-white {
+    margin-left: 0;
+  }
+}
