@@ -1,0 +1,164 @@
+.costumer {
+  position: relative;
+  padding-top: 56px;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/quote.svg");
+    width: 143px;
+    height: 120px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    width: 445px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: #18191F;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 32px;
+    color: #18191F;
+    margin-bottom: 24px;
+  }
+
+}
+.cards {
+  border-radius: 8px;
+  border: 1px solid #29292a12;
+  transition: all 0.4s ease;
+  
+  &:hover {
+    box-shadow: 0px 10px 20px #29292a12;
+  }
+
+  &:nth-child(1) {
+    width: 445px;
+    padding: 39px 32px 14px 64px;
+    margin-bottom: 32px;
+  }
+
+  &:nth-child(2) {
+    width: 350px;
+    padding: 41px 32px 32px 64px;
+  }
+
+  &:nth-child(3) {
+    margin-right: 32px;
+    width: 350px;
+    padding: 0 32px 96px 64px;
+  }
+
+  &__img {
+
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    margin-bottom: 24px;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -32px;
+      background-image: url("../../img/quote-small.svg");
+      width: 16px;
+      height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #18191f;
+  }
+
+  &__subtext {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #969bab;
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .costumer {
+
+    &::before {
+      left: 50%;
+      transform: translate(-50%);
+      width: 50px;
+      height: 50px;
+    } 
+    
+    &__title {
+      width: 100%;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  .cards {
+    margin: 0 auto;
+
+    &:nth-child(3) {
+      margin: 0 auto;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cards {
+
+    &:nth-child(1) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  
+    &:nth-child(2) {
+      width: 100%;
+    }
+  
+    &:nth-child(3) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+
+    &:nth-child(1) {
+      width: 100%;
+    }
+  
+    &:nth-child(2) {
+      width: 100%;
+    }
+  
+    &:nth-child(3) {
+      width: 100%;
+    }
+  }
+}

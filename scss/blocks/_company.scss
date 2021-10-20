@@ -1,0 +1,59 @@
+.company {
+  padding: 90px 0;
+
+  &__title {
+    width: 445px;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: #18191F;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    width: 445px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #18191F;
+  }
+
+  &__list {
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .company {
+    text-align: center;
+    margin: 0 auto;
+    
+    &__title {
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 648px) {
+  .company {
+    
+    &__title {
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    &__text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
